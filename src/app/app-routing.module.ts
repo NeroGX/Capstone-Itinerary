@@ -8,7 +8,7 @@ import { KyotoComponent } from './kyoto/kyoto.component';
 
 const routes: Routes = [
   { path: 'Home', component:AppComponent },
-  { path: 'About Me', component: AboutMeComponent},
+  { path: 'AboutMe', component: AboutMeComponent},
   { path: 'Tokyo', component: TokyoComponent},
   { path: 'Kyoto', component: KyotoComponent}
 ]
@@ -16,7 +16,11 @@ const routes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
   ]
 })
 export class AppRoutingModule { }
